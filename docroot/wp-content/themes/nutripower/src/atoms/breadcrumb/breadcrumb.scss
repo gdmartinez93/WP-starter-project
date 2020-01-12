@@ -1,0 +1,38 @@
+.storefront-breadcrumb {
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F8F8F8;
+
+    @mixin text-styles {
+        color: #A3A3A3;
+        font-size: 15px;
+        font-family: $font-regular;
+    }
+
+    .col-full {
+        max-width: 1200px !important;
+    }
+
+    nav.woocommerce-breadcrumb {
+        @include text-styles;
+        color: $color-primary;
+
+        a {
+            @include text-styles;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+        .breadcrumb-separator {
+            text-indent: initial;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

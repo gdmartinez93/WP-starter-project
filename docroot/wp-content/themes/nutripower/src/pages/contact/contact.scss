@@ -1,0 +1,39 @@
+#simple-contact-form-wrap {
+    > code {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    #simple-contact-form {
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+        
+        form {
+            fieldset {
+                background-color: transparent;
+
+                label,
+                input {
+                    display: block;
+                    width: 100%;
+                }
+
+                label {
+                    color: $color-text;
+                    font-family: $font-noah-bold;
+                    font-size: 16px;
+                }
+            }
+
+            .scf-submit {
+                margin-top: 20px;
+                text-align: right;
+            }
+
+            .scf-confirm-checkbox {
+                display: none;
+            }
+        }
+    }
+}

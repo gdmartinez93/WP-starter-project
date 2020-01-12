@@ -1,0 +1,66 @@
+h1, h2, h3, h4, h5, h6 {
+    color: $color-text;
+    font-family: $font-bold;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 60px;
+
+    @media all and (min-width: 768px) {
+        font-size: 90px;
+        line-height: 90px;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 25px;
+    line-height: 27px;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin paragrah-styles {
+    color: $color-text;
+    font-family: $font-regular;
+    font-size: 16px;
+}
+
+p,
+ul li {
+    @include paragrah-styles;
+}
+
+a {
+    transition-property: color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    color: $color-text;
+    font-family: $font-bold;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        transition-timing-function: ease-in;
+        color: $color-primary;
+        text-decoration: underline;
+    }
+}

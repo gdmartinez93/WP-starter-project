@@ -1,0 +1,96 @@
+{
+  "_args": [
+    [
+      "gridlex",
+      "/home/gd.martinez/Documents/Projects/Turner/turnernow/docroot/themes/custom/trn_jupiter_theme"
+    ]
+  ],
+  "_from": "gridlex@latest",
+  "_id": "gridlex@2.7.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gridlex",
+  "_nodeVersion": "8.4.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/gridlex_2.7.1_1519660537601_0.5506052118591149"
+  },
+  "_npmUser": {
+    "email": "neoz38@gmail.com",
+    "name": "webdevlint"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "gridlex",
+    "raw": "gridlex",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gridlex/-/gridlex-2.7.1.tgz",
+  "_shasum": "ff562762dc8fc7e59bee2163afaa116859961ef7",
+  "_shrinkwrap": null,
+  "_spec": "gridlex",
+  "_where": "/home/gd.martinez/Documents/Projects/Turner/turnernow/docroot/themes/custom/trn_jupiter_theme",
+  "author": {
+    "name": "https://github.com/devlint"
+  },
+  "bugs": {
+    "url": "https://github.com/devlint/gridlex/issues"
+  },
+  "dependencies": {},
+  "description": "Just a Flexbox Grid System",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "fileCount": 49,
+    "integrity": "sha512-LnBGyAzX3GNYG/I7Vp2sQRo8EaI3IzOn8a8j2AjrsZUS0kClKImJAuluwu75H+31/PwWvaBlUGNpd+qDflb/QA==",
+    "shasum": "ff562762dc8fc7e59bee2163afaa116859961ef7",
+    "tarball": "https://registry.npmjs.org/gridlex/-/gridlex-2.7.1.tgz",
+    "unpackedSize": 565674
+  },
+  "gitHead": "80f515e1d1c73b673455d351d79a77a8ab44467d",
+  "homepage": "http://gridlex.devlint.fr",
+  "keywords": [
+    "css",
+    "grid",
+    "col",
+    "sass",
+    "scss",
+    "mediaqueries",
+    "flexbox"
+  ],
+  "license": "MIT",
+  "main": "dist/gridlex.min.css",
+  "maintainers": [
+    {
+      "email": "neoz38@gmail.com",
+      "name": "webdevlint"
+    }
+  ],
+  "name": "gridlex",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/devlint/gridlex.git"
+  },
+  "sass": "src/gridlex.scss",
+  "scripts": {
+    "dist": "node-sass src/gridlex.scss --sourceMap dist/ -o dist/ && postcss dist/gridlex.css > dist/gridlex.min.css && npm run docs",
+    "docs": "cp -R dist/*.* docs",
+    "version": "npm run dist && git add -A ."
+  },
+  "style": "docs/gridlex.css",
+  "url": "https://github.com/devlint/gridlex",
+  "version": "2.7.1"
+}

@@ -1,0 +1,13 @@
+.dropdown {
+    &-menu {
+        margin-top: 5px;
+        border-color: $color-borders;
+        color: #212529;
+        font-family: $font-regular;
+        font-size: 16px;
+    }
+
+    &-item {
+        padding: 10px 20px;
+    }
+}

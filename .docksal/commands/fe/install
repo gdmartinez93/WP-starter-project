@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+## Using `fin fe/npm run COMMAND` causes the command to run inside the CLI container.
+
+# Usage: fin fe/npm COMMAND | fin fe/npm start | fin fe/npm run compile | ...
+
+# Causes this script to run inside the docksal cli container.
+#: exec_target = cli
+
+cd ${THEME_PATH}
+npm install && npm install -g gulp && gem install scss_lint

@@ -1,0 +1,13 @@
+.woocommerce-info {
+    background-color: $color-info-bg;
+    color: $color-info-text;
+}
+
+.woocommerce-message {
+    .button {
+        &:hover {
+            background-color: transparent !important;
+            color: #ffffff !important;
+        }
+    }
+}

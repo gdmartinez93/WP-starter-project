@@ -1,0 +1,30 @@
+$screen-sm: 569px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+
+// $font-bold: 'TeXGyreAdventor-Bold';
+$font-bold: 'TeXGyreAdventor-Bold';
+// $font-regular: 'TeXGyreAdventor-Regular';
+$font-regular: 'TeXGyreAdventor-Regular';
+$font-italic: 'TeXGyreAdventor-Italic';
+$font-noah-regular: 'Noah-Regular';
+$font-noah-bold: 'Noah-Bold';
+
+$color-text: #282828;
+$color-borders: #C3C3C3;
+$color-disabled: #F0F0F0;
+
+$color-primary: #9CBC53;
+
+$color-info-bg: #CCE5FF;
+$color-info-text: #004085;
+
+$space-element--small: 5px;
+$space-element--inside: 10px;
+$space-element: 20px;
+$space-section: 30px;
+$sidebar-space-section: 10px;
+
+$max-width-container: 1200px;
+
+$browsers-support: '.isIE10', '.safari7', '.safari8';

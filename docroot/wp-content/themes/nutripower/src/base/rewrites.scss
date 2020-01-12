@@ -1,0 +1,94 @@
+.site-header {
+    padding-top: 0 !important;
+}
+
+.select2 {
+    &-selection {
+        height: auto !important;
+        padding: 12px 14px !important;
+        padding-right: 38px;
+        border-radius: 0 !important;
+        border-color: $color-borders !important;
+
+        &__rendered {
+            padding: 0 !important;
+            color: $color-text;
+            font-family: $font-regular;
+            font-size: 16px;
+        }
+
+        &__arrow {
+            top: 15px !important;
+            right: 15px !important;
+
+            .presentation {
+                border-color: transparent transparent #000000 transparent;
+            }
+        }
+    }
+
+    &-container {
+        .select2-results__options {
+
+        }
+
+        .select2-results__option {
+            color: $color-text;
+            font-family: $font-regular;
+            font-size: 16px;
+            transition-property: background-color, color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+
+            &.select2-results__option--highlighted,
+            &[data-selected="true"] {
+                background-color: $color-primary !important;
+                color: #FFFFFF;
+                transition-timing-function: ease-in;
+            }
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: calc(50% - 12.5px);
+    width: 50px;
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: none;
+    background-color: #C3C4C3;
+    border-radius: 50%;
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+
+    @media all and (min-width: 1420px) {
+        top: calc(50% - 17.5px);
+        width: 70px;
+        height: 70px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    img {
+        position: relative;
+        width: 20px;
+        height: 32px;
+        margin: auto;
+    }
+}
+
+.swiper-button-prev {
+    img {
+        right: 2px;
+    }
+}
+
+.swiper-button-next {
+    img {
+        transform: rotate(180deg);
+        left: 2px;
+    }
+}

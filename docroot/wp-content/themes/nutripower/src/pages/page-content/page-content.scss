@@ -1,0 +1,234 @@
+.page-content {
+    @mixin title-section {
+        font-size: 25px;
+        font-family: $font-regular;
+        line-height: 25px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    @mixin font-styles {
+        color: #282828;
+        font-size: 17px;
+        font-family: $font-noah-regular;
+    }
+
+    @mixin table-styles {
+        th,
+        td {
+            @include font-styles;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid $color-borders;
+        }
+
+        thead {
+            tr {
+                th {
+                    font-family: $font-noah-bold;
+                }
+            }
+        }
+    }
+
+    .shop_table {
+        @include table-styles;
+        margin-bottom: 30px;
+    }
+
+    .entry-title {
+        @include title-section;
+        margin-bottom: 40px;
+    }
+
+    .woocommerce-cart-form {
+        .product-quantity {
+            .quantity {
+                position: relative;
+                display: inline-block;
+
+                input {
+                    max-width: none;
+                    min-width: 100px;
+                    padding-right: 20px !important;
+                    padding-left: 20px !important;
+                }
+            }
+        }
+
+        .shop_table {
+            margin-bottom: 30px;
+
+            tbody {
+                tr {
+                    &:not(.cart_item) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-collaterals {
+        .cart_totals {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            float: none;
+            
+            @media all and (min-width: 768px) {
+                width: 80%;
+            }
+
+            > h2,
+            .shop_table {
+                @media all and (min-width: 768px) {
+                    max-width: calc(100% - 440px);
+                }
+            }
+
+            > h2 {
+                @include title-section;
+            }
+
+            .shop_table {
+                tbody {
+                    tr {                        
+                        th,
+                        td {
+                            background-color: #FFFFFF;
+                            border-bottom: 1px solid $color-borders;
+                            font-size: 16px;
+                            font-family: $font-noah-regular;
+                            font-weight: normal;
+                        }
+
+                        td {
+                            p {
+                                font-size: 16px;
+                                font-family: $font-noah-regular;
+                                font-weight: normal;
+                            }
+                        }
+
+                        &:last-child {
+                            th,
+                            td {
+                                font-family: $font-noah-bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wc-proceed-to-checkout {
+                margin-bottom: 0;
+
+                @media all and (min-width: 768px) {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 400px;
+                    margin-left: 40px;
+                    margin-bottom: 0;
+                }
+
+                .button {
+                    display: block;
+                    width: 100%;
+                    margin-right: 20px;
+                    font-size: 16px;
+
+                    @media all and (min-width: 768px) {
+                        display: inline-block;
+                        width: auto;
+                        margin-bottom: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+
+                        @media all and (min-width: 768px) {
+                            margin-right: 0;
+                        }
+                    }
+
+                    &.checkout-button {
+                        @extend .button--primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .woocommerce-checkout {
+        #customer_details {
+            .col-2 {
+                display: none;
+            }
+        }
+
+        .woocommerce-billing-fields {
+            h3 {
+                margin-bottom: 30px;
+            }
+
+            .form-row {
+                position: relative;
+                display: block;
+                width: 100%;
+                margin: 0 0 20px;
+
+                label {
+                    font-family: $font-noah-bold;
+                }
+            }
+        }
+
+        &-payment {
+            .payment_method_payu_latam_sdk_pls {
+                font-family: $font-noah-bold;
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            input.input-radio {
+                &:checked {
+                    + label {
+                        &:before {
+                            color: $color-primary !important;
+                        }
+                    }
+                }
+            }
+
+            .payment_box {
+                .card-wrapper {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    
+                    .jp-card-front,
+                    .jp-card-back {
+                        background: linear-gradient(to right, #4092b5 60%, #3580aa 90%);
+                    }
+                }
+
+                label,
+                input {
+                    margin-bottom: 20px;
+                }
+
+                input {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .place-order {
+                .button {
+                    font-size: 16px !important;
+                }
+            }
+        }
+    }
+}

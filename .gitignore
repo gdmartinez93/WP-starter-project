@@ -3,3 +3,7 @@
 
 # WordPress
 wp-config.php
+uploads
+
+# Node packages
+node_modules/

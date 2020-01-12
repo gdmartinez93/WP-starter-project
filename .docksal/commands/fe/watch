@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+## Enable fe development mode.
+# Causes this script to run inside the docksal cli container.
+#: exec_target = cli
+
+# Compile the theme and run browser-sync to watch for changes.
+cd ${THEME_PATH}
+gulp watch

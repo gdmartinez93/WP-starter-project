@@ -1,0 +1,281 @@
+.menu-navigation {
+    &__container {
+        margin-top: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+
+    &__element {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+
+        @media all and (min-width: 768px) {
+            padding-top: 22px;
+            padding-bottom: 22px;
+        }
+
+        a {
+            position: relative;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            color: $color-text;
+            font-family: $font-regular;
+            font-size: 16px;
+            text-transform: capitalize;
+            text-decoration: none;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &:hover {
+                transition-timing-function: ease-in;
+                color: $color-primary;
+            }
+        }
+
+        &--icon {
+            position: relative;
+            
+            a {
+                padding-left: 50px;
+
+                .hamburger {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 0;
+
+                    &-inner {
+                        width: 32px;
+                        transition-delay: 0s;
+                        transition-property: transform, background-color;
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-in-out;
+
+                        &:before,
+                        &:after {
+                            width: 32px;
+                            transition-delay: 0s;
+                            transition-property: transform, background-color;
+                            transition-duration: 0.3s;
+                            transition-timing-function: ease-in-out;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .hamburger {
+                        &:not(.is-active) {
+                            .hamburger-inner {
+                                transition-timing-function: ease-in;
+                                background-color: $color-primary;
+                            }
+                        }
+
+                        &-inner {
+                            &:before,
+                            &:after {
+                                transition-timing-function: ease-in;
+                                background-color: $color-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu {
+        border: 1px solid $color-borders;
+
+        &__sidebar {
+            &:before {
+                content: '';
+                position: absolute;
+                top: -20px;
+                left: 80px;
+                width: 40px;
+                height: 20px;
+                background-image: url(../images/icons/icon-submenu.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            
+            ul {
+                @include reset-spaces;
+                max-height: 535px;
+                padding-top: 30px;
+                list-style: none;
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    background-color: #F5F5F5;
+                }
+            
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                    background-color: #555555;
+                }
+
+                li {
+                    padding: 20px 40px;
+                    padding-right: 20px;
+                    transition-property: background-color;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-in-out;
+                    cursor: pointer;
+
+                    a {
+                        transition-property: color;
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-in-out;
+                        color: $color-text;
+                        font-family: $font-regular;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    &:hover,
+                    &.is-active {
+                        background-color: $color-primary;
+                        transition-timing-function: ease-in;
+
+                        a {
+                            color: #FFFFFF;
+                            transition-timing-function: ease-in;
+                        }
+                    }
+                }
+
+                > li {
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            position: relative;
+
+            .content-container {
+                &:not(.is-active) {
+                    position: absolute;
+                    z-index: -10;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+            }
+
+            .subcategories,
+            .thumbnail {
+                height: 535px;
+            }
+
+            .subcategories {
+                padding: 50px 30px;
+                background-color: #EFEFEF;
+
+                h3 {
+                    position: relative;
+                    margin-bottom: 30px;
+                    padding-bottom: 10px;
+                    text-transform: uppercase;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 20px;
+                        height: 3px;
+                        background-color: $color-primary;
+                    }
+                }
+
+                ul {
+                    @include reset-spaces;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    max-height: calc(100% - 20px);
+                    list-style: none;
+                    overflow-x: auto;
+
+                    &::-webkit-scrollbar {
+                        height: 6px;
+                        background-color: #F5F5F5;
+                    }
+                
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                        background-color: #555555;
+                    }
+
+                    li {
+                        width: 50%;
+                        margin-right: 40px;
+                        margin-bottom: 22px;
+                        overflow-wrap: break-word;
+                        word-wrap: break-word;
+
+                        a {
+                            color: $color-text;
+                            font-family: $font-regular;
+
+                            &:hover {
+                                color: $color-primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .thumbnail {
+                &__container {
+                    width: 100%;
+                    height: 100%;
+                    padding-right: 12px;
+                }
+            }
+        }
+    }
+}
+
+.site-content {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.45);
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+    }
+
+    &.is-overlay {
+        overflow: hidden;
+        pointer-events: none;
+        
+        &:before {
+            opacity: 1;
+            transition-timing-function: ease-in;
+        }
+    }
+}
