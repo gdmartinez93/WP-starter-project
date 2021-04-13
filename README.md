@@ -11,9 +11,7 @@
 
 This will initialize local settings and install the site via `wp-cli`
 
-    ```
     fin init
-    ```
 
 ### 3. Point your browser to
 
