@@ -19,12 +19,10 @@
 
 ### 3. Point your browser to
 
-    ```
     http://FOLDER_NAME.docksal
-    ```
 
 ### 4. Initial configuration
     
-    Set the name for your theme, if you will do a E-commerce site use: `store_theme` if not, use `theme`.
+Set the name for your theme, if you will do a E-commerce site use: `store_theme` if not, use `theme`.
     
-    Search in your project folder this key `THEME_NAME` and replace all of them with the name of your theme.
+Search in your project folder this key `THEME_NAME` and replace all of them with the name of your theme.
