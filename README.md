@@ -4,14 +4,12 @@
 
 ### 1. Clone this repo into your Projects directory
 
-    ```
     git clone https://github.com/gdmartinezsandino/wp-starter-project FOLDER_NAME
     cd FOLDER_NAME
-    ```
 
 ### 2. Initialize the site
 
-    This will initialize local settings and install the site via `wp-cli`
+This will initialize local settings and install the site via `wp-cli`
 
     ```
     fin init
