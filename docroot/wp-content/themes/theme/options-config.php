@@ -52,8 +52,8 @@ $args = array(
     //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
     'allow_sub_menu'       => true,
     // Show the sections below the admin menu item or not
-    'menu_title'           => __( 'Configuraciones del Tema', 'agathostechnology' ),
-    'page_title'           => __( 'Configuraciones del Tema', 'agathostechnology' ),
+    'menu_title'           => __( 'Configuraciones del Tema', 'THEME_NAME-theme' ),
+    'page_title'           => __( 'Configuraciones del Tema', 'THEME_NAME-theme' ),
     // You will need to generate a Google API key to use this feature.
     // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
     'google_api_key'       => '',
@@ -152,19 +152,19 @@ $args = array(
 $args['admin_bar_links'][] = array(
     'id'    => 'redux-docs',
     'href'  => 'http://docs.reduxframework.com/',
-    'title' => __( 'Documentación', 'agathostechnology' ),
+    'title' => __( 'Documentación', 'THEME_NAME-theme' ),
 );
 
 $args['admin_bar_links'][] = array(
     //'id'    => 'redux-support',
     'href'  => 'https://github.com/ReduxFramework/redux-framework/issues',
-    'title' => __( 'Soporte', 'agathostechnology' ),
+    'title' => __( 'Soporte', 'THEME_NAME-theme' ),
 );
 
 $args['admin_bar_links'][] = array(
     'id'    => 'redux-extensions',
     'href'  => 'reduxframework.com/extensions',
-    'title' => __( 'Extensiones', 'agathostechnology' ),
+    'title' => __( 'Extensiones', 'THEME_NAME-theme' ),
 );
 
 // Panel Intro text -> before the form
@@ -174,9 +174,9 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
     } else {
         $v = str_replace( '-', '_', $args['opt_name'] );
     }
-    //$args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'agathostechnology' ), $v );
+    //$args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'THEME_NAME-theme' ), $v );
 } else {
-    //$args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'agathostechnology' );
+    //$args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'THEME_NAME-theme' );
 }
 
 Redux::setArgs( $opt_name, $args );
@@ -184,85 +184,77 @@ Redux::setArgs( $opt_name, $args );
 $tabs = array(
     array(
         'id'      => 'redux-help-tab-1',
-        'title'   => __( 'Theme Information 1', 'agathostechnology' ),
-        'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'agathostechnology' )
+        'title'   => __( 'Theme Information 1', 'THEME_NAME-theme' ),
+        'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'THEME_NAME-theme' )
     ),
     array(
         'id'      => 'redux-help-tab-2',
-        'title'   => __( 'Theme Information 2', 'agathostechnology' ),
-        'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'agathostechnology' )
+        'title'   => __( 'Theme Information 2', 'THEME_NAME-theme' ),
+        'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'THEME_NAME-theme' )
     )
 );
 Redux::setHelpTab( $opt_name, $tabs );
 
 // Set the help sidebar
-$content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'agathostechnology' );
+$content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'THEME_NAME-theme' );
 Redux::setHelpSidebar( $opt_name, $content );
 
 // -> Example: Section creation
 Redux::setSection( $opt_name, array(
-    'title'            => __( 'Site', 'agathostechnology' ),
+    'title'            => __( 'Site', 'THEME_NAME-theme' ),
     'id'               => 'basic',
-    'desc'             => __( 'Settings of site.', 'agathostechnology' ),
+    'desc'             => __( 'Settings of site.', 'THEME_NAME-theme' ),
     'customizer_width' => '400px',
     'icon'             => 'el el-home'
 ));
 
 Redux::setSection( $opt_name, array(
-    'title'                 => __('General','agathostechnology'),
+    'title'                 => __('General','THEME_NAME-theme'),
     'id'                    => 'general_settings',
     'subsection'            => true,
     'customizer_width'      => '400px',
-    'desc'                  => __('General Settings', 'agathostechnology'),
+    'desc'                  => __('General Settings', 'THEME_NAME-theme'),
     'fields'                => array(
         array(
             'id'       => 'general_settings_logo',
             'type'     => 'media',
-            'title'    => __( 'Logo', 'agathostechnology' ),
-            'subtitle' => __( 'Upload a svg file', 'agathostechnology' ),
+            'title'    => __( 'Logo', 'THEME_NAME-theme' ),
+            'subtitle' => __( 'Upload a svg file', 'THEME_NAME-theme' ),
         ),
         array(
             'id'       => 'general_settings_logo_symbol',
             'type'     => 'media',
-            'title'    => __( 'Logo Symbol', 'agathostechnology' ),
+            'title'    => __( 'Logo Symbol', 'THEME_NAME-theme' ),
         ),
         array(
             'id'       => 'general_settings_phone',
             'type'     => 'text',
-            'title'    => __( 'Phone', 'agathostechnology' ),
-            'subtitle' => __( 'Type your phone contact', 'agathostechnology' ),
+            'title'    => __( 'Phone', 'THEME_NAME-theme' ),
+            'subtitle' => __( 'Type your phone contact', 'THEME_NAME-theme' ),
         ),
         array(
             'id'       => 'general_settings_email',
             'type'     => 'text',
-            'title'    => __( 'Email', 'agathostechnology' ),
-            'subtitle' => __( 'Type your email contact', 'agathostechnology' ),
+            'title'    => __( 'Email', 'THEME_NAME-theme' ),
+            'subtitle' => __( 'Type your email contact', 'THEME_NAME-theme' ),
         ),
         array(
             'id'       => 'general_settings_social_linkedin',
             'type'     => 'text',
-            'title'    => __( 'Linkedin', 'agathostechnology' ),
-            'subtitle' => __( 'Type your Linkedin account', 'agathostechnology' ),
+            'title'    => __( 'Linkedin', 'THEME_NAME-theme' ),
+            'subtitle' => __( 'Type your Linkedin account', 'THEME_NAME-theme' ),
         ),
         array(
             'id'       => 'general_settings_social_facebook',
             'type'     => 'text',
-            'title'    => __( 'Facebook', 'agathostechnology' ),
-            'subtitle' => __( 'Type your Facebook account', 'agathostechnology' ),
+            'title'    => __( 'Facebook', 'THEME_NAME-theme' ),
+            'subtitle' => __( 'Type your Facebook account', 'THEME_NAME-theme' ),
         ),
         array(
             'id'       => 'general_settings_social_twitter',
             'type'     => 'text',
-            'title'    => __( 'Twitter', 'agathostechnology' ),
-            'subtitle' => __( 'Type your Twitter account', 'agathostechnology' ),
-        ),
-        array(
-            'id'       => 'general_settings_homepage',
-            'type'     => 'select',
-            'multi'    => false,
-            'data'     => 'page',
-            'title'    => __( 'Homepage', 'agathostechnology' ),
-            'subtitle' => __( 'Choose your home', 'agathostechnology' ),
+            'title'    => __( 'Twitter', 'THEME_NAME-theme' ),
+            'subtitle' => __( 'Type your Twitter account', 'THEME_NAME-theme' ),
         ),
     )
 ));
@@ -318,8 +310,8 @@ if ( ! function_exists( 'dynamic_section' ) ) {
     function dynamic_section( $sections ) {
         //$sections = array();
         $sections[] = array(
-            'title'  => __( 'Section via hook', 'agathostechnology' ),
-            'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'agathostechnology' ),
+            'title'  => __( 'Section via hook', 'THEME_NAME-theme' ),
+            'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'THEME_NAME-theme' ),
             'icon'   => 'el el-paper-clip',
             // Leave this as a blank section, no options just some intro text set above.
             'fields' => array()

@@ -1,67 +1,32 @@
-@font-face {
-  font-family: 'Roboto-Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Roboto/Roboto-Bold.eot'), local('☺'), url('../fonts/Roboto/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+@mixin font-bold {
+  font-family: $font;
+  font-weight: 700;
 }
 
-@font-face {
-  font-family: 'Roboto-Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Roboto/Roboto-Medium.eot'), local('☺'), url('../fonts/Roboto/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+@mixin font-medium {
+  font-family: $font;
+  font-weight: 500;
 }
 
-@font-face {
-  font-family: 'Roboto-Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Roboto/Roboto-Regular.eot'), local('☺'), url('../fonts/Roboto/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+@mixin font-regular {
+  font-family: $font;
+  font-weight: 400;
 }
 
-@font-face {
-  font-family: 'Roboto-Light';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Roboto/Roboto-Light.eot'), local('☺'), url('../fonts/Roboto/Roboto-Light.woff') format('woff'), url('../fonts/Roboto/Roboto-Light.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'GothamBold';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Gotham/GothamBold.eot'), local('☺'), url('../fonts/Gotham/GothamBold.woff') format('woff'), url('../fonts/Gotham/GothamBold.ttf') format('truetype'), url('../fonts/Gotham/GothamBold.svg') format('svg');
-}
-
-@font-face {
-  font-family: 'GothamBook';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Gotham/GothamBook.eot'), local('☺'), url('../fonts/Gotham/GothamBook.woff') format('woff'), url('../fonts/Gotham/GothamBook.ttf') format('truetype'), url('../fonts/Gotham/GothamBook.svg') format('svg');
-}
-
-@font-face {
-  font-family: 'GothamLight';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Gotham/GothamLight.eot'), local('☺'), url('../fonts/Gotham/GothamLight.woff') format('woff'), url('../fonts/Gotham/GothamLight.ttf') format('truetype'), url('../fonts/Gotham/GothamLight.svg') format('svg');
-}
-
-@font-face {
-  font-family: 'GothamMedium';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Gotham/GothamMedium.eot'), local('☺'), url('../fonts/Gotham/GothamMedium.woff') format('woff'), url('../fonts/Gotham/GothamMedium.ttf') format('truetype'), url('../fonts/Gotham/GothamMedium.svg') format('svg');
+@mixin font-light {
+  font-family: $font;
+  font-weight: 300;
 }
 
 @mixin paragraph-styles {
+  @include font-regular;
   color: $color-text;
-  font-family: $font-paragraph;
   font-size: $font-paragraph-size;
+  line-height: 1.3;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-gotham-bold;
+  @include font-bold;
 }
 
 h1 {
@@ -96,20 +61,23 @@ ul li {
 
 a {
   @include paragraph-styles;
+  @include font-medium;
+  color: $color-link;
   transition-property: color;
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
-  font-family: $font-gotham-book;
   text-decoration: none;
 
   &:focus {
     outline: none;
+    color: darken($color-link, 20%);
   }
 
   &:hover {
     transition-timing-function: ease-in;
-    color: $color-primary;
+    color: $color-green-dark;
     text-decoration: none;
+    color: darken($color-link, 20%);
   }
 }
 

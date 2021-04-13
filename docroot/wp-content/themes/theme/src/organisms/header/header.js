@@ -1,13 +1,14 @@
-import $ from 'jquery';
+$ = jQuery;
+$(document).ready(function () {
+  var $header = $('.o-header');
+  var $navigation = $header.find('.o-header__navigation');
+  
+  var $menuAction = $header.find('.o-header__menu-action');
+  $menuAction.on('click', 'button', function (event) {
+    $(this).children().toggleClass('is-active');
 
-const $header = $('.o-header');
-const $menu = $header.find('.o-header__menu');
-const $menuAction = $header.find('.o-header__menu-action');
-
-$menuAction.on('click', 'button', function (event) {
-  if ($(this).children().hasClass('is-active')) {
-    $(this).children().removeClass('is-active');
-  } else {
-    $(this).children().removeClass('is-active');
-  }
+    if ($navigation.length > 0) {
+      $navigation.toggleClass('show-menu');
+    }
+  });
 });

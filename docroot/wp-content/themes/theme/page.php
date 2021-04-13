@@ -1,17 +1,18 @@
 <?php
-    get_header();
-    global $post; ?>
 
-<section class="p-detail content-wp">
-    <header class="p-detail__header grid-middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>)">
-        <h1><?php echo the_title(); ?></h1>
-    </header>
+get_header();
+global $post, $project_options;
 
-    <article class="p-detail__container content-wp">
-        <?php echo $post->post_content; ?>
+if( !is_home() && !is_front_page() ) : ?>
 
-        <?php get_template_part( 'src/atom/button-top/button-top' ); ?>
-    </article>
-</section>
+  <section class="t-content"><?php
 
-<?php get_footer(); ?>
+    while ( have_posts() ) : the_post();
+      the_content();
+    endwhile; ?>
+
+  </section> <?php
+
+endif;
+
+get_footer(); ?>

@@ -1,12 +1,8 @@
-<?php get_header(); ?>
+<?php 
+    get_header(); 
+    global $post;  
+?>
 
-<section class="Archive content-wp">
-    <?php get_sidebar(); ?>
-    
-    <div class="Archive__container container"></div>
-
-    <?php get_template_part( 'src/atoms/button-top/button-top' ); ?>
-</section>
-
+    <!-- // Code -->
 
 <?php get_footer(); ?>

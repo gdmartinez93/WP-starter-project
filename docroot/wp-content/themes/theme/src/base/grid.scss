@@ -43,7 +43,7 @@
       $vertical: flex-start;
     } @else if ($vertical == center) {
       $vertical: center;
-    }  @else if ($vertical == right) {
+    }  @else if ($vertical == bottom) {
       $vertical: flex-end;
     }
 

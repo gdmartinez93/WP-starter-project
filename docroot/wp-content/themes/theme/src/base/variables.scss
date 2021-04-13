@@ -5,18 +5,16 @@ $screen-lg: 1024px;
 $color-black: #000000;
 $color-white: #FFFFFF;
 
-$color-primary: #E6007E;
+$color-green: #26B99A;
+$color-blue: #52B2D1;
+$color-purple: #7383BF;
+$color-green-dark: #274191;
 
 $color-danger: #E72D41;
 
-$color-text: #7C7C7C;
+$color-text: #2f2f2e;
+$color-link: #52B2D1;
 
-$color-link: $color-primary;
-$color-error: $color-danger;
+$font: 'Montserrat', sans-serif;
 
-$font-bold: 'BrownStdBold';
-$font-regular: 'BrownStdRegular';
-$font-light: 'BrownStdLight';
-
-$font-paragraph-size: 17px;
-$line-height-paragraph: 1.2;
+$font-paragraph-size: 16px;

@@ -1,11 +1,11 @@
-<?php global $post;  ?>
+<?php global $post; ?>
 
 <!DOCTYPE html>
 <html lang="<?php echo $language; ?>">
   <head>
     <?php $site_name = get_bloginfo( 'name' ); ?>
     <title><?php echo $site_name; ?></title>
-    <meta name="description" content="We are a digitally company with innovation, design, and engineering everything in one place. We are in the latest trends in technology in the digital field to empower your company in every aspect or why not start to do the shape of your ideas.">
+    <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name=”robots” content="index, follow">
 
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -18,26 +18,41 @@
 
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon"/>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <script>
       var pathTheme = '<?php echo get_stylesheet_directory_uri() ?>';
-    </script>
-    <?php wp_head(); ?>
+    </script><?php 
+    
+    wp_head(); ?>
   </head>
 
   <body>
-    <!--<div id="wptime-plugin-preloader"></div>--> <?php
-    
+    <div id="wptime-plugin-preloader"></div><?php
+
     global $project_options;
     $logo = $project_options['general_settings_logo'];
-    $logo = file_get_contents(wp_get_attachment_url($logo['id'])); ?>
+    $logo = file_get_contents( wp_get_attachment_url( $logo['id'] ) ); ?>
 
-    <header id="header" class="o-header">
-      <figure class="o-header__brand">
-        <a href="<?php echo home_url(); ?>"><?php echo $logo; ?></a>
-      </figure>
+    <header class="o-header">
+      <div class="container">
+        <div class="grid-middle">
+          <div class="o-header__logo col-shrink">
+            <a href="<?php echo home_url(); ?>"><?php echo $logo; ?></a>
+          </div>
+          
+          <div class="o-header__menu-action">
+            <button class="button-collapse" type="button">
+              <div class="hamburger hamburger--spring">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
-    
-    <main id="main" role="main">
+        
+    <div id="wrapper">
+      <main id="main" role="main">

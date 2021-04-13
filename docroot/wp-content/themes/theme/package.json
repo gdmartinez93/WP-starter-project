@@ -1,24 +1,17 @@
 {
-  "name": "theme_starter",
+  "name": "THEME_NAME",
   "version": "0.0.1",
-  "description": "theme_starter_description",
-  "author": "theme_starter_author",
+  "description": "Corporative Website",
+  "author": "Alfonso Dussan Paez",
   "main": "src/js/main.js",
   "scripts": {
     "watch": "webpack -p",
     "build:dev": "webpack --watch",
     "build:prod": "webpack -p --env production"
   },
-  "keywords": [
-    "digital",
-    "development",
-    "boilerplate"
-  ],
-  "homepage": "theme_starter_url",
   "dependencies": {
-    "gridlex": "~2.2.5"
-  },
-  "devDependencies": {
+    "gridlex": "~2.2.5",
+    "gulp": "^4.0.2",
     "autoprefixer": "^9.7.3",
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
@@ -26,8 +19,6 @@
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "glob": "^7.1.6",
-    "gulp": "4.0.0",
-    "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
     "gulp-imagemin": "^6.2.0",
     "gulp-newer": "^1.4.0",
@@ -36,6 +27,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-scss-lint": "^1.0.0",
+    "gulp-concat": "^2.6.1",
     "webpack": "^4.41.5",
     "webpack-stream": "^5.2.1"
   }

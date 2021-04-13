@@ -1,8 +1,8 @@
 <?php 
-  get_header();
-  global $post; 
+    get_header(); 
+    global $post;  
 ?>
 
-  AQUIIII
+    <!-- // Code -->
 
 <?php get_footer(); ?>

@@ -1,3 +1,16 @@
 .o-footer {
-  // code
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: white;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  &__logo {
+    @media all and (max-width: $screen-md) {
+      text-align: center;
+    }
+
+    svg {
+      height: 54px;
+    }
+  }
 }

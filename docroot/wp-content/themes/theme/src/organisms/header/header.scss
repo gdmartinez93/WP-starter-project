@@ -1,26 +1,38 @@
-.o-header {
-  $self: '.o-header';
-
+.o-header { 
   position: fixed;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  z-index: 100;
   width: 100%;
-  height: 100%;
-  background-color: #F7F7F7;
+  padding: 22px 0;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-  &__brand {
+  @media all and (min-width: $screen-md) {
+    padding: 0;
+  }
+
+  &__logo {
     svg {
-      width: 40px;
-    }
+      height: 54px;
+
+      @media all and (max-width: $screen-md - 1px) {
+        width: 155px;
+        height: auto;
+      }
+    }    
   }
 
   &__menu-action {
+    @media all and (min-width: $screen-md) {
+      display: none;
+    }
+
     transition: all 0.25s ease-in-out;
     cursor: pointer;
+
+    @media all and (max-width: $screen-lg) {
+      @include col-expand;
+      text-align: right;
+    }
 
     .button-collapse {
       border: none;
